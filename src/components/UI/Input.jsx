@@ -8,7 +8,7 @@ const Input = (props) => {
 }
 
 const StyledInput = styled.input`
-    
+    display: ${(props) => props.dispay};
 `
 
 export default Input

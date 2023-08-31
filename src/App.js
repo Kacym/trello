@@ -1,10 +1,10 @@
 import { styled } from "styled-components"
-import LoginForm from "./components/login-form/LoginForm";
+import AppRoute from "./routes/AppRoute";
 
 function App() {
   return (
     <StyledApp>
-      <LoginForm/> 
+      <AppRoute/>
     </StyledApp>
   );
 }

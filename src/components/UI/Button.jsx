@@ -10,6 +10,7 @@ const Button = (props) => {
       brRadius={props.brRadius}
       color={props.color}
       display={props.dispay}
+      {...props}
     >
       {props.title}
     </StyledButton>
@@ -22,7 +23,6 @@ const StyledButton = styled.button`
     border-radius: ${(props) => props.brRadius};
     background-color: ${(props) => props.bgColor};
     color: ${(props) => props.color};
-    display: ${(props) => props.dispay || "block"};
 `;
 
 export default Button;
