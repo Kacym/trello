@@ -4,13 +4,18 @@ import Input from "../UI/Input";
 import Button from "../UI/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../store/auth/auth-reducer";
+import { useNavigate } from "react-router-dom";
 
 const defaultUser = { 
     email: "admin@gmail.com", 
     password: "admin123" 
 };
+
 const LoginForm = () => {
-  const isLogged = useSelector((state) => state.reducer);
+  const { isLogged } = useSelector((state) => state.reducer);
+  console.log(isLogged)
+
+  const navigate = useNavigate()
 
   const dispatch = useDispatch();
 
@@ -29,6 +34,9 @@ const LoginForm = () => {
     e.preventDefault()
     if (passwordInputValue === defaultUser.password && emailInputValue === defaultUser.email) {
         dispatch(login())
+    }
+    if(isLogged === true) {
+      navigate("/Trello")
     }
   };
 

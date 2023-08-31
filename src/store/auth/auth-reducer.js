@@ -7,9 +7,12 @@ export const authReducer = createSlice({
     reducers: {
         login: (state) => {
             state.isLogged = true
+        },
+        logout: (state) => {
+            state.isLogged = false
         }
     }
 })
 
-export const { login } = authReducer.actions;
+export const { login, logout } = authReducer.actions;
 export default authReducer.reducer;
