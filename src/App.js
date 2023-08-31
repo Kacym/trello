@@ -1,9 +1,10 @@
 import { styled } from "styled-components"
+import LoginForm from "./components/login-form/LoginForm";
 
 function App() {
   return (
     <StyledApp>
-      <h1>Hello World</h1>  
+      <LoginForm/> 
     </StyledApp>
   );
 }
