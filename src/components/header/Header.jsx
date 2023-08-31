@@ -1,26 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { logout } from "../../store/auth/auth-reducer";
+import { navigate } from "../login-form/LoginForm"
 
 const Header = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const { isLogged } = useSelector((state) => state.reducer);
 
   const userLogoutHandler = () => {
     dispatch(logout());
-    console.log(isLogged);
+    navigate("/")
   };
+
+  console.log(isLogged)
 
   return (
     <StyledHeader>
       <HeaderContainer>
         <h1>Trello</h1>
-        <Link to="/" onClick={userLogoutHandler}>
-          Log out
-        </Link>
+         <button onClick={userLogoutHandler}>Log out</button>
       </HeaderContainer>
     </StyledHeader>
   );
