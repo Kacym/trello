@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { styled } from "styled-components";
 import Input from "../UI/Input";
 import Button from "../UI/Button";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { login } from "../../store/auth/auth-reducer";
 import { useNavigate } from "react-router-dom";
 

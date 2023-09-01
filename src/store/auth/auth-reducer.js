@@ -3,7 +3,7 @@ import { initialState } from "../../constants/helpers";
 
 export const authReducer = createSlice({
     name: 'auth-reducer',
-    initialState: initialState.isLogged,
+    initialState: initialState,
     reducers: {
         login: (state) => {
             state.isLogged = true
