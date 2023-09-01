@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { styled } from "styled-components";
 import Input from "../UI/Input";
 import Button from "../UI/Button";
@@ -13,8 +13,6 @@ const defaultUser = {
 
 const LoginForm = () => {
   const navigate = useNavigate();
-
-  const isLogged = useSelector((state) => state.reducer.isLogged);
 
   const dispatch = useDispatch();
 
@@ -39,8 +37,6 @@ const LoginForm = () => {
       navigate("/Trello");
     }
   };
-
-  console.log(isLogged);
 
   return (
     <StyledLoginForm>
