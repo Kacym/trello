@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Input from "../UI/Input";
 import Button from "../UI/Button";
 import { styled } from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addCard } from "../../store/todos/todos-reducer";
 
 const CardForm = () => {
-  const [state, setState] = useState(false);
+  const [isCardInputVisible, setIsCardInputVisible] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
   const dispatch = useDispatch();
@@ -17,11 +17,11 @@ const CardForm = () => {
 
   const changeStateHandler = (e) => {
     e.stopPropagation();
-    setState(true);
+    setIsCardInputVisible(true);
   };
 
   const changeStateHandlerToFalse = () => {
-    setState(false);
+    setIsCardInputVisible(false);
   }
 
   const addNewCard = (e) => {
@@ -33,13 +33,14 @@ const CardForm = () => {
             id: Math.floor(Math.random() * 100000),
         }
         dispatch(addCard(newCard))
-        setState(false)
+        setInputValue("")
+        setIsCardInputVisible(false)
     }
   }
 
   return (
     <StyledCardForm>
-      {state ? (
+      {isCardInputVisible ? (
         <>
           <Input value={inputValue} onChange={getInputValue} onClick={changeStateHandler} />
           <AddOrClose>
