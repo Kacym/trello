@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+
 const Modal = ({ children, closeModalHandler }) => {
   return (
     <>
@@ -16,7 +17,9 @@ const StyledModal = styled.div`
   z-index: 1000;
   background-color: white;
   left: 33%;
-  padding: 20px;
+  top: 20%;
+  padding: 20px 60px;
+  border-radius: 9px;
 `;
 
 const StyledBackdrop = styled.div`

@@ -8,8 +8,19 @@ export const todosReducer = createSlice({
     addCard: (state, action) => {
       state.push(action.payload);
     },
+    removeCard: (state, action) => {
+      return state.filter((item) => item.id !== action.payload)
+    },
+    addInnerTask: (state, action) => {
+      state.forEach((item) => {
+        if(item.id === action.payload.id) {
+          return item.task = [...item.task, action.payload.newTodo];
+        }
+        return item
+      });
+    },
   },
 });
 
-export const { addCard } = todosReducer.actions;
+export const { addCard, addInnerTask, removeCard } = todosReducer.actions;
 export default todosReducer.reducer;

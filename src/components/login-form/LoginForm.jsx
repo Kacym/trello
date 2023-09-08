@@ -40,28 +40,63 @@ const LoginForm = () => {
 
   return (
     <StyledLoginForm>
-      <Input
-        placeholder="Укажите адресс электронной почты"
-        onChange={getEmailInputValue}
-        value={emailInputValue}
-        inputType="email"
-      />
-      <br />
-      <Input
-        placeholder="Введите пароль"
-        onChange={getPasswordInputValue}
-        value={passwordInputValue}
-        inputType="password"
-      />
-      <br />
-      <Button onClick={loginUserHandler} title="Продолжить" />
+      <MainText>Вход в trello</MainText>
+      <FormsInputsAndButton>
+        <Input
+          width="75%"
+          height="30px"
+          outline="gray 2px solid"
+          focusOutline="solid 2px #24b1b1"
+          placeholder="Укажите адресс электронной почты"
+          onChange={getEmailInputValue}
+          value={emailInputValue}
+          inputType="email"
+          padding="10px"
+          brRadius="5px"
+        />
+        <Input
+          width="75%"
+          height="30px"
+          outline="gray 2px solid"
+          focusOutline="solid 2px #24b1b1"
+          placeholder="Введите пароль"
+          onChange={getPasswordInputValue}
+          value={passwordInputValue}
+          inputType="password"
+          padding="10px"
+          brRadius="5px"
+        />
+        <Button
+          width="77%"
+          height="40px"
+          color="white"
+          brRadius="4px"
+          bgColor="#5AAC44"
+          hoverBgColor="#6bc053"
+          onClick={loginUserHandler}
+          title="Продолжить"
+        />
+      </FormsInputsAndButton>
     </StyledLoginForm>
   );
 };
 
-const StyledLoginForm = styled.form`
-  width: 50%;
+const StyledLoginForm = styled.div`
+  width: 30%;
   margin: 0 auto;
-  border: solid;
+  box-shadow: 1px 1px 3px 2px;
+  border-radius: 4px;
+  padding: 30px 0px;
+`;
+
+const FormsInputsAndButton = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+`;
+const MainText = styled.h2`
+  color: white;
+  margin-bottom: 2rem;
 `;
 export default LoginForm;

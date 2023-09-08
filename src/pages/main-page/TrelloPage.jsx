@@ -3,22 +3,26 @@ import { styled } from "styled-components";
 import Header from "../../components/header/Header";
 import CardFrom from "../../components/card-form/CardForm";
 import CardList from "../../components/card-list/CardList";
+import background from "../../image/background.jpg"
 
 const TrelloPage = () => {
   return (
-    <StyledTrelloPage>
-      <Header />
-      <h1>Trello</h1>
-      <CardListAndForm>
-        <CardList />
-        <CardFrom />
-      </CardListAndForm>
-    </StyledTrelloPage>
+      <StyledTrelloPage>
+        <Header />
+        <CardListAndForm>
+          <CardList />
+          <CardFrom />
+        </CardListAndForm>
+      </StyledTrelloPage>
   );
 };
 
 const StyledTrelloPage = styled.div`
-  border: solid;
+  width: 100%;
+  height: 100vh;
+  background-image: url(${background});
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const CardListAndForm = styled.div`
