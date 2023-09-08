@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/trello/static/css/main.5e41044a.css",
+    "main.js": "/trello/static/js/main.b7bef7c4.js",
+    "static/media/background.jpg": "/trello/static/media/background.f72485fce1ed1f76a3b7.jpg",
+    "static/media/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg": "/trello/static/media/pngtree-modern-double-color-futuristic-neon-background-image_351866.d4aefdc9d8746fde785d.jpg",
+    "index.html": "/trello/index.html",
+    "main.5e41044a.css.map": "/trello/static/css/main.5e41044a.css.map",
+    "main.b7bef7c4.js.map": "/trello/static/js/main.b7bef7c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e41044a.css",
+    "static/js/main.b7bef7c4.js"
+  ]
+}
